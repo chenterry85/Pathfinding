@@ -1,6 +1,6 @@
 # Pathfinding
 
-### Introduction\n
+### Introduction
 -----------------
 This is a grid pathfinding project that employs uniform cost search, greedy search, and A* search.
 
