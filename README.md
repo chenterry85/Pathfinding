@@ -1,9 +1,11 @@
 # Pathfinding
 
-##Introduction
+### Introduction\n
+-----------------
 This is a grid pathfinding project that employs uniform cost search, greedy search, and A* search.
 
-##Instructions
+## Instructions
+-----------------
 1) Lay out first two white blocks as the starting node and the ending node
 2) Layout the red nodes as obstacles
 3) Execute Search Algorithm
