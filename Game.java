@@ -1,5 +1,3 @@
-
-
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -54,21 +52,22 @@ public class Game extends JPanel implements MouseListener, MouseMotionListener, 
 		Graphics2D g2d = (Graphics2D) g;
 		for (int r = 0; r < nodes.length; r++) {
 			for (int c = 0; c < nodes[r].length; c++) {
-				if (nodes[r][c].visited) {
+				if (nodes[r][c].visited && !nodes[r][c].inPath) {
 					g2d.setColor(new Color(0,153,255));
-					g2d.fillRect(c * width, r * height, width, height);
+					g2d.fillRoundRect(c * width, r * height, width, height, 9, 9);
 				}
 				if (nodes[r][c].openList && !nodes[r][c].visited) {
-					g2d.setColor(new Color(51,204,255));
-					g2d.fillRect(c * width, r * height, width, height);
+					g2d.setColor(new Color(10,186,181));
+					g2d.fillRoundRect(c * width + (int)(width * 1/5), r * height + (int)(height * 1/5),
+																				(int)(width * 3/5), (int)(height * 3/5),12,12);
 				}
 				if (nodes[r][c].isStart) {
 					g2d.setColor(Color.white);
-					g2d.fillRect(c * width, r * height, width, height);
+					g2d.fillRoundRect(c * width, r * height, width, height,12,12);
 				}
 				if (nodes[r][c].isEnd) {
 					g2d.setColor(Color.white);
-					g2d.fillRect(c * width, r * height, width, height);
+					g2d.fillRoundRect(c * width, r * height, width, height, 12, 12);
 				}
 				if (nodes[r][c].isObstacle) {
 					g2d.setColor(new Color(255,0,128));
@@ -76,12 +75,12 @@ public class Game extends JPanel implements MouseListener, MouseMotionListener, 
 				}
 				if (nodes[r][c].inPath) {
 					g2d.setColor(new Color(0,102,255));
-					g2d.fillRect(c * width, r * height, width, height);
+					g2d.fillRoundRect(c * width, r * height, width, height, 12, 12);
 				}
 			}
 		}
 		// grid
-		g2d.setColor(new Color(110,110,110));
+		g2d.setColor(new Color(0,0,0));
 		for (int r = 0; r < nodes.length; r++)
 			g2d.drawLine(0, r * height, 800, r * height);
 		for (int c = 0; c < nodes[0].length; c++)
