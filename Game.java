@@ -27,7 +27,7 @@ public class Game extends JPanel implements MouseListener, MouseMotionListener, 
 	}
 
 	private Game() {
-    showInstruction();
+		printInstructions();
 		this.setBackground(Color.BLACK);
 		this.setFocusable(true);
 		this.requestFocusInWindow();
@@ -107,7 +107,7 @@ public class Game extends JPanel implements MouseListener, MouseMotionListener, 
 		repaint();
 	}
 
-  private void showInstruction(){
+  private void printInstructions(){
     System.out.println("\nKey Press: \n    a - A Star Search\n    g - Greedy Search\n    u - Uniform Cost Search\n    r - reset\n");
   }
 
@@ -172,5 +172,5 @@ public class Game extends JPanel implements MouseListener, MouseMotionListener, 
 
 	@Override
 	public void keyReleased(KeyEvent e) {}
-		
+
 }
