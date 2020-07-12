@@ -10,7 +10,7 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
 
 **Greedy Search**: also called the heuristic search, might not always find the best solution but is guaranteed to find a good solution in reasonable time. Useful in solving tough problems which 1) could not be solved any other way 2) solutions take an infinite time or very long time to compute.
 
-**A* Search** (weighted): arguably the best pathfinding algorithm, it's a combination of Uniform cost search and Greedy search.
+**A Star Search**: arguably the best pathfinding algorithm, it's a combination of Uniform cost search and Greedy search.
 
 ## Usage
 
