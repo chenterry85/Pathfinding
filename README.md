@@ -6,16 +6,16 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
 
 <p float="left">
   <a href="https://https://youtu.be/HeObeF7Ac4g">
-    <img src="https://imgur.com/vc6XgB4" width="45%" />
+    <img src="https://imgur.com/vc6XgB4.gif" width="45%" />
   </a>
   <a href="https://www.youtube.com/watch?v=8qppoFKyK9s">
-    <img src="https://imgur.com/rMZ2kSc" width="45%" />
+    <img src="https://imgur.com/rMZ2kSc.gif" width="45%" />
   </a>
   <a href="https://www.youtube.com/watch?v=d8zUc5UvtF8">
-    <img src="https://imgur.com/LtCLuyp" width="45%" />
+    <img src="https://imgur.com/LtCLuyp.gif" width="45%" />
   </a>
   <a href="https://www.youtube.com/watch?v=qr5o0Cy_bvA">
-    <img src="https://imgur.com/3FCxObB" width="45%" />
+    <img src="https://imgur.com/3FCxObB.gif" width="45%" />
   </a>
 </p>
 
