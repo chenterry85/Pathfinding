@@ -1,7 +1,5 @@
 # Pathfinding Visualization
 
-## Introduction
-
 Welcome to pathfinding! This is a grid pathfinding project that employs uniform cost search, greedy search, and A* search from one starting node to the end node. I built this project out of my own interest to visualize pathfinding algorithm in live action!
 
 <p float="left">
@@ -51,3 +49,5 @@ java Window.java
    - **"g"** - Greedy Search\n
    - **"u"** - Uniform Cost Search\n
 5) Press **"r"** to **RESET**
+
+## Purpose
