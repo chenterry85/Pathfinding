@@ -4,6 +4,9 @@
 
 Welcome to pathfinding! This is a grid pathfinding project that employs uniform cost search, greedy search, and A* search from one starting node to the end node. I built this project out of my own interest to visualize pathfinding algorithm in live action!
 
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/a84rT7t"><a href="//imgur.com/a/a84rT7t">D</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
 <p float="left">
   <a href="https://https://youtu.be/HeObeF7Ac4g">
     <img src="https://imgur.com/vc6XgB4.gif" width="45%" />
