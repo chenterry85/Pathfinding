@@ -12,11 +12,15 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 
 public class Game extends JPanel implements MouseListener, MouseMotionListener, KeyListener {
+	
 	static Game instance;
-	int height = 20, width = 20;
+	
+	int height = 20;
+	int width = 20;
+	boolean isChosenS, isChosenE;
+	
 	Node[][] nodes = new Node[50][50];
 	ArrayList<Node> path = new ArrayList<Node>();
-	boolean isChosenS, isChosenE;
 	Node start, end;
 	Domain s = new Domain();
 
@@ -28,12 +32,16 @@ public class Game extends JPanel implements MouseListener, MouseMotionListener, 
 
 	private Game() {
 		printInstructions();
+		
 		this.setBackground(Color.BLACK);
 		this.setFocusable(true);
 		this.requestFocusInWindow();
+		
 		addMouseListener(this);
 		addMouseMotionListener(this);
 		addKeyListener(this);
+		
+		//initialize nodes
 		for (int r = 0; r < nodes.length; r++) {
 			for (int c = 0; c < nodes[r].length; c++) {
 				nodes[r][c] = new Node(r, c);
@@ -107,9 +115,9 @@ public class Game extends JPanel implements MouseListener, MouseMotionListener, 
 		repaint();
 	}
 
-  private void printInstructions(){
-    System.out.println("\nKey Press: \n    a - A Star Search\n    g - Greedy Search\n    u - Uniform Cost Search\n    r - reset\n");
-  }
+        private void printInstructions(){
+		System.out.println("\nKey Press: \n    a - A Star Search\n    g - Greedy Search\n    u - Uniform Cost Search\n    r - reset\n");
+	}
 
 	public void reset() {
 		for (int r = 0; r < nodes.length; r++) {
