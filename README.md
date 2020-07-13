@@ -6,7 +6,7 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
 
 ## Installation
 
-```
+```bash
 # Running the Project
 git clone https://github.com/chenterry85/pathfinding.git
 
