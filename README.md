@@ -11,8 +11,11 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
   <a href="https://www.youtube.com/watch?v=d8zUc5UvtF8">
     <img src="http://i.freegifmaker.me/1/5/9/4/6/4/15946474201149226.gif?1594647434" width="200" />
   </a>
-  <a href="https://www.youtube.com/watch?v=MzBVTS1Zlek">
-    <img src="http://i.freegifmaker.me/1/5/9/4/6/4/15946482201149280.gif?1594648236" width="200" />
+  <a href="https://www.youtube.com/watch?v=qr5o0Cy_bvA">
+    <img src="http://i.freegifmaker.me/1/5/9/4/6/5/15946534231149211.gif?1594653435" width="200" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=8qppoFKyK9s">
+    <img src="http://i.freegifmaker.me/1/5/9/4/6/5/15946535161149292.gif?1594653527" width="200" />
   </a>
 </p>
 
