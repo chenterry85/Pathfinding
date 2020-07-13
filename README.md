@@ -4,6 +4,19 @@
 
 Welcome to pathfinding! This is a grid pathfinding project that employs uniform cost search, greedy search, and A* search from one starting node to the end node. I built this project out of my own interest to visualize pathfinding algorithm in live action!
 
+## Installation
+
+```
+# Running the Project
+git clone https://github.com/chenterry85/pathfinding.git
+
+# Compile file
+javac Window.java
+
+# Run file
+java Window.java
+```
+
 ## Algorithms
 
 **Uniform Cost Search**: a variant of Dijikstra’s algorithm, useful for infinite graphs and those graph which are too large to represent in the memory
