@@ -19,8 +19,8 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
 3) **Mouse Drag** to create **BARRIER**
 4) Select a search Alogirthm 
    Key Press: 
-      **"a"** - A Star Search
-      **"g"** - Greedy Search
-      **"u"** - Uniform Cost Search
+   **"a"** - A Star Search
+   **"g"** - Greedy Search
+   **"u"** - Uniform Cost Search
 5) Press **"r"** to **RESET**
 
