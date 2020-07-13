@@ -6,16 +6,16 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
 
 <p float="left">
   <a href="https://https://youtu.be/HeObeF7Ac4g">
-    <img src="http://i.freegifmaker.me/1/5/9/4/6/4/1594646674114920.gif?1594646688" width="250" />
+    <img src="http://i.freegifmaker.me/1/5/9/4/6/4/1594646674114920.gif?1594646688" width="220" />
   </a>
   <a href="https://www.youtube.com/watch?v=8qppoFKyK9s">
-    <img src="http://i.freegifmaker.me/1/5/9/4/6/5/15946535161149292.gif?1594653527" width="250" />
+    <img src="http://i.freegifmaker.me/1/5/9/4/6/5/15946535161149292.gif?1594653527" width="220" />
   </a>
   <a href="https://www.youtube.com/watch?v=d8zUc5UvtF8">
-    <img src="http://i.freegifmaker.me/1/5/9/4/6/4/15946474201149226.gif?1594647434" width="250" />
+    <img src="http://i.freegifmaker.me/1/5/9/4/6/4/15946474201149226.gif?1594647434" width="220" />
   </a>
   <a href="https://www.youtube.com/watch?v=qr5o0Cy_bvA">
-    <img src="http://i.freegifmaker.me/1/5/9/4/6/5/15946534231149211.gif?1594653435" width="250" />
+    <img src="http://i.freegifmaker.me/1/5/9/4/6/5/15946534231149211.gif?1594653435" width="220" />
   </a>
 </p>
 
