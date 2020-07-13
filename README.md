@@ -36,3 +36,10 @@ java Window.java
    - **"g"** - Greedy Search\n
    - **"u"** - Uniform Cost Search\n
 5) Press **"r"** to **RESET**
+
+## Screenshoots
+
+![](images/sc1.png)
+![](images/sc2.png)
+![](images/sc3.png)
+![](images/sc4.png)
