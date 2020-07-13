@@ -1,11 +1,11 @@
-
-
 import java.util.ArrayList;
 
 public class Node implements Comparable<Node> {
+	
 	boolean visited, isStart, isEnd, isObstacle, inPath, openList;
 	double g = 10e5, h = 10e5, t = g + h;
 	int r, c;
+	
 	Node parent;
 	ArrayList<Node> edges = new ArrayList<Node>();
 
