@@ -49,5 +49,3 @@ java Window.java
    - **"g"** - Greedy Search\n
    - **"u"** - Uniform Cost Search\n
 5) Press **"r"** to **RESET**
-
-## Purpose
