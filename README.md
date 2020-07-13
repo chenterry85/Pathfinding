@@ -5,8 +5,15 @@
 Welcome to pathfinding! This is a grid pathfinding project that employs uniform cost search, greedy search, and A* search from one starting node to the end node. I built this project out of my own interest to visualize pathfinding algorithm in live action!
 
 <p float="left">
-  <img src="http://i.freegifmaker.me/1/5/9/4/6/4/1594646674114920.gif?1594646688" width="100" />
-  <img src="http://i.freegifmaker.me/1/5/9/4/6/4/15946474201149226.gif?1594647434" width="100" />
+  <a href="https://https://youtu.be/HeObeF7Ac4g">
+    <img src="http://i.freegifmaker.me/1/5/9/4/6/4/1594646674114920.gif?1594646688" width="200" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=d8zUc5UvtF8">
+    <img src="http://i.freegifmaker.me/1/5/9/4/6/4/15946474201149226.gif?1594647434" width="200" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=MzBVTS1Zlek">
+    <img src="http://i.freegifmaker.me/1/5/9/4/6/4/15946482201149280.gif?1594648236" width="200" />
+  </a>
 </p>
 
 ## Installation
