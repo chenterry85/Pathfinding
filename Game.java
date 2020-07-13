@@ -12,13 +12,14 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 
 public class Game extends JPanel implements MouseListener, MouseMotionListener, KeyListener {
-	
+
 	static Game instance;
-	
+	static boolean isUserActionEnabled = true;
+
 	int height = 20;
 	int width = 20;
-	boolean isChosenS, isChosenE;
-	
+	boolean hadChosenStart, hadChosenEnd;
+
 	Node[][] nodes = new Node[50][50];
 	ArrayList<Node> path = new ArrayList<Node>();
 	Node start, end;
@@ -32,15 +33,15 @@ public class Game extends JPanel implements MouseListener, MouseMotionListener, 
 
 	private Game() {
 		printInstructions();
-		
+
 		this.setBackground(Color.BLACK);
 		this.setFocusable(true);
 		this.requestFocusInWindow();
-		
+
 		addMouseListener(this);
 		addMouseMotionListener(this);
 		addKeyListener(this);
-		
+
 		//initialize nodes
 		for (int r = 0; r < nodes.length; r++) {
 			for (int c = 0; c < nodes[r].length; c++) {
@@ -87,39 +88,25 @@ public class Game extends JPanel implements MouseListener, MouseMotionListener, 
 				}
 			}
 		}
-		// grid
-		g2d.setColor(new Color(0,0,0));
+
+		// paint grid
+		g2d.setColor(new Color(7,7,7));
 		for (int r = 0; r < nodes.length; r++)
 			g2d.drawLine(0, r * height, 800, r * height);
 		for (int c = 0; c < nodes[0].length; c++)
 			g2d.drawLine(c * width, 0, c * width, 800);
 	}
 
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		int r = e.getY() / height;
-		int c = e.getX() / width;
-		if (e.getButton() == MouseEvent.BUTTON1) {
-			if (r >= 0 && r < nodes.length && c >= 0 && c < nodes[0].length) {
-				if (!isChosenS) {
-					start = nodes[r][c];
-					start.isStart = true;
-					isChosenS = true;
-				} else if (isChosenS && !isChosenE && !nodes[r][c].isStart) {
-					end = nodes[r][c];
-					end.isEnd = true;
-					isChosenE = true;
-				}
-			}
-		}
-		repaint();
-	}
 
-        private void printInstructions(){
-		System.out.println("\nKey Press: \n    a - A Star Search\n    g - Greedy Search\n    u - Uniform Cost Search\n    r - reset\n");
+
+  private void printInstructions(){
+		System.out.println("\nInstructions: \n1) First Click to select STARTING Node\n2) Second Click to select END Node\n3) Mouse Drag to create BARRIER \n4) Select a search Alogirthm \n   Key Press: \n      \"a\" -> A Star Search\n      \"g\" -> Greedy Search\n      \"u\" -> Uniform Cost Search\n5) Press \"r\" to reset\n");
 	}
 
 	public void reset() {
+		System.out.println("Simulation resets");
+		isUserActionEnabled = true;
+
 		for (int r = 0; r < nodes.length; r++) {
 			for (int c = 0; c < nodes[r].length; c++) {
 				nodes[r][c] = new Node(r, c);
@@ -133,10 +120,77 @@ public class Game extends JPanel implements MouseListener, MouseMotionListener, 
 		}
 		start = null;
 		end = null;
-		isChosenS = false;
-		isChosenE = false;
+		hadChosenStart = false;
+		hadChosenEnd = false;
 		s = new Domain();
 	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		int r = e.getY() / height;
+		int c = e.getX() / width;
+
+		if (e.getButton() == MouseEvent.BUTTON1 && isUserActionEnabled &&
+		    r >= 0 && r < nodes.length &&
+				c >= 0 && c < nodes[0].length) {
+
+			if (!hadChosenStart) {
+				start = nodes[r][c];
+				start.isStart = true;
+				hadChosenStart = true;
+			} else if (!hadChosenEnd && !nodes[r][c].isStart && !start.isNextTo(nodes[r][c])) {
+				end = nodes[r][c];
+				end.isEnd = true;
+				hadChosenEnd = true;
+			}
+		}
+
+		repaint();
+
+	}
+
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		int r = e.getY() / height;
+		int c = e.getX() / width;
+
+		//check for start and end tiles
+		if (!hadChosenStart) {
+			start = nodes[r][c];
+			start.isStart = true;
+			hadChosenStart = true;
+		} else if (!hadChosenEnd && !nodes[r][c].isStart && !start.isNextTo(nodes[r][c])) {
+			end = nodes[r][c];
+			end.isEnd = true;
+			hadChosenEnd = true;
+		}
+
+
+		//check for obstacle tiles
+		if (hadChosenStart && hadChosenEnd &&
+		    !nodes[r][c].isStart && !nodes[r][c].isEnd &&
+				!nodes[r][c].isObstacle && isUserActionEnabled)
+			nodes[r][c].isObstacle = true;
+
+		repaint();
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if (e.getKeyCode() == KeyEvent.VK_U && isUserActionEnabled)
+			s.UCS(start, end);
+		if (e.getKeyCode() == KeyEvent.VK_G && isUserActionEnabled)
+			s.Greedy(start, end);
+		if (e.getKeyCode() == KeyEvent.VK_A && isUserActionEnabled)
+			s.AStar(start, end);
+		if (e.getKeyCode() == KeyEvent.VK_R)
+			reset();
+			
+		repaint();
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {}
 
 	@Override
 	public void mousePressed(MouseEvent e) {}
@@ -151,34 +205,10 @@ public class Game extends JPanel implements MouseListener, MouseMotionListener, 
 	public void mouseExited(MouseEvent e) {}
 
 	@Override
-	public void mouseDragged(MouseEvent e) {
-		int r = e.getY() / height;
-		int c = e.getX() / width;
-		if (isChosenS && isChosenE && !nodes[r][c].isStart && !nodes[r][c].isEnd && !nodes[r][c].isObstacle)
-			nodes[r][c].isObstacle = true;
-		repaint();
-	}
-
-	@Override
 	public void mouseMoved(MouseEvent e) {}
 
 	@Override
 	public void keyTyped(KeyEvent e) {}
 
-	@Override
-	public void keyPressed(KeyEvent e) {
-		if (e.getKeyCode() == KeyEvent.VK_U)
-			s.UCS(start, end);
-		if (e.getKeyCode() == KeyEvent.VK_G)
-			s.Greedy(start, end);
-		if (e.getKeyCode() == KeyEvent.VK_A)
-			s.AStar(start, end);
-		if (e.getKeyCode() == KeyEvent.VK_R)
-			reset();
-		repaint();
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {}
 
 }

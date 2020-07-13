@@ -8,24 +8,29 @@ import javax.swing.Timer;
 public class Domain {
 	PriorityQueue<Node> pqueue = new PriorityQueue<Node>();
 	Timer timer;
-	
+
 	//Uniform Cost Search
 	public void UCS(Node start, Node end) {
 
-        System.out.println("Performing Uniform Cost Search Algorithm");
+		System.out.println("Performing Uniform Cost Search Algorithm.");
 
 		start.g = 0;
 		start.t = start.g;
 		pqueue.add(start);
+
 		timer = new Timer(1, new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 				if (!pqueue.isEmpty()) {
 					Node current = pqueue.poll();
+
 					if (current.equals(end)) {
-						System.out.println("Path found.");
+						System.out.println("Path found! Press \"r\" to reset.\n");
+						Game.isUserActionEnabled = false;
 						backtrack(current);
 						timer.stop();
 					}
+
 					if (!current.visited) {
 						current.visited = true;
 						for (int i = 0; i < current.edges.size(); i++) {
@@ -47,30 +52,36 @@ public class Domain {
 						}
 						Game.getInstance().repaint();
 					}
+
 				}
 			}
 		});
 		timer.start();
 	}
-	
-	
+
+
 	//Greedy Search
 	public void Greedy(Node start, Node end) {
 
-        System.out.println("Performing Greedy Search Algorithm");
+    System.out.println("Performing Greedy Search Algorithm.");
 
 		start.h = start.getDistance(end);
 		start.t = start.h;
 		pqueue.add(start);
+
 		timer = new Timer(30, new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 				if (!pqueue.isEmpty()) {
 					Node current = pqueue.poll();
+
 					if (current.equals(end)) {
-						System.out.println("Path found.");
+						System.out.println("Path found! Press \"r\" to reset.\n");
+						Game.isUserActionEnabled = false;
 						backtrack(current);
 						timer.stop();
 					}
+
 					if (!current.visited) {
 						current.visited = true;
 						for (int i = 0; i < current.edges.size(); i++) {
@@ -91,25 +102,30 @@ public class Domain {
 		timer.start();
 	}
 
-	
+
 	//A* Search
 	public void AStar(Node start, Node end) {
 
-        System.out.println("Performing A Star Search Algorithm");
+    System.out.println("Performing A Star Search Algorithm.");
 
 		start.g = 0;
 		start.h = start.getDistance(end);
 		start.t = start.g +start.h;
 		pqueue.add(start);
+
 		timer = new Timer(10, new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 				if (!pqueue.isEmpty()) {
 					Node current = pqueue.poll();
+
 					if (current.equals(end)) {
-						System.out.println("Path found.");
+						System.out.println("Path found! Press \"r\" to reset.\n");
+						Game.isUserActionEnabled = false;
 						backtrack(current);
 						timer.stop();
 					}
+
 					if (!current.visited) {
 						current.visited = true;
 						for (int i = 0; i < current.edges.size(); i++) {

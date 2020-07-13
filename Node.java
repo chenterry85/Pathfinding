@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
 public class Node implements Comparable<Node> {
-	
+
 	boolean visited, isStart, isEnd, isObstacle, inPath, openList;
 	double g = 10e5, h = 10e5, t = g + h;
 	int r, c;
-	
+
 	Node parent;
 	ArrayList<Node> edges = new ArrayList<Node>();
 
@@ -39,14 +39,27 @@ public class Node implements Comparable<Node> {
 			edges.add(nodes[r-1][c+1]);
 		if(c - 1 >= 0)
 			edges.add(nodes[r][c-1]);
-		if(c+1 < nodes[0].length)
+		if(c + 1 < nodes[0].length)
 			edges.add(nodes[r][c+1]);
 		if(r + 1 < nodes.length && c - 1 >= 0)
 			edges.add(nodes[r+1][c-1]);
-		if(r+1 < nodes.length)
+		if(r + 1 < nodes.length)
 			edges.add(nodes[r+1][c]);
-		if(r +1 < nodes.length && c + 1 < nodes[0].length)
+		if(r + 1 < nodes.length && c + 1 < nodes[0].length)
 			edges.add(nodes[r+1][c+1]);
+	}
+
+	public boolean isNextTo(Node node){
+		if(r == node.r-1 && c == node.c-1 ||
+		   r == node.r-1 && c == node.c   ||
+			 r == node.r-1 && c == node.c+1 ||
+			 r == node.r   && c == node.c-1 ||
+       r == node.r   && c == node.c+1 ||
+       r == node.r+1 && c == node.c-1 ||
+			 r == node.r+1 && c == node.c   ||
+			 r == node.r+1 && c == node.c+1)
+			 return true;
+		return false;
 	}
 
 	@Override
@@ -57,4 +70,5 @@ public class Node implements Comparable<Node> {
 			return 1;
 		return 0;
 	}
+
 }

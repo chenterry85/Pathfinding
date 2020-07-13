@@ -14,10 +14,12 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
 
 ## Usage
 
-1) Lay out first two white blocks as the starting node and the ending node
-2) Layout the red nodes as obstacles
-3) Execute Search Algorithm <br />
-  press **A** for A* Search <br />
-  press **G** for Greedy Search <br />
-  press **U** for Uniform Cost search <br />
-4) press **R** to reset grid
+1) **First Click** to select **STARTING Node**
+2) **Second Click** to select **END Node**
+3) **Mouse Drag** to create **BARRIER**
+4) Select a search Alogirthm
+   Key Press:
+   - **"a"** - A Star Search\n
+   - **"g"** - Greedy Search\n
+   - **"u"** - Uniform Cost Search\n
+5) Press **"r"** to **RESET**
