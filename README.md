@@ -9,12 +9,12 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
 <div style="content: '';clear: both; display: table">
   <div style="float: left; width: 50%; padding: 5px">
     <a href="https://https://youtu.be/HeObeF7Ac4g">
-      <img src="http://i.freegifmaker.me/1/5/9/4/6/4/1594646674114920.gif?1594646688" alt="gifs"/>
+      <img src="http://i.freegifmaker.me/1/5/9/4/6/4/1594646674114920.gif?1594646688" alt="gifs" width="100%" style="margin: 20px 0"/>
     </a>
   </div>
   <div style="float: left; width:50%; padding: 5px">
     <a href="https://www.youtube.com/watch?v=d8zUc5UvtF8">
-      <img src="http://i.freegifmaker.me/1/5/9/4/6/4/15946474201149226.gif?1594647434" alt="gifs"/>
+      <img src="http://i.freegifmaker.me/1/5/9/4/6/4/15946474201149226.gif?1594647434" alt="gifs" width="100%" style="margin: 20px 0"/>
     </a>
   </div>
 </div>
