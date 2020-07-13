@@ -17,10 +17,10 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
 1) **First Click** to select **STARTING Node**
 2) **Second Click** to select **END Node**
 3) **Mouse Drag** to create **BARRIER**
-4) Select a search Alogirthm 
-   Key Press: 
-   **"a"** - A Star Search
-   **"g"** - Greedy Search
-   **"u"** - Uniform Cost Search
+4) Select a search Alogirthm\n
+   Key Press: \n
+   **"a"** - A Star Search\n
+   **"g"** - Greedy Search\n
+   **"u"** - Uniform Cost Search\n
 5) Press **"r"** to **RESET**
 
