@@ -1,4 +1,4 @@
-# Pathfinding
+# Pathfinding Visualization
 
 ## Introduction
 
@@ -40,7 +40,7 @@ java Window.java
 
 **A * Search**: arguably the best pathfinding algorithm, it's a combination of Uniform cost search and Greedy search.
 
-## Usage
+## Quick Start
 
 1) **First Click** to select **STARTING Node**
 2) **Second Click** to select **END Node**
