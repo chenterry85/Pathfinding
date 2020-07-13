@@ -1,5 +1,3 @@
-
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -10,10 +8,11 @@ import javax.swing.Timer;
 public class Domain {
 	PriorityQueue<Node> pqueue = new PriorityQueue<Node>();
 	Timer timer;
-
+	
+	//Uniform Cost Search
 	public void UCS(Node start, Node end) {
 
-    System.out.println("Performing Uniform Cost Search Algorithm");
+        System.out.println("Performing Uniform Cost Search Algorithm");
 
 		start.g = 0;
 		start.t = start.g;
@@ -53,10 +52,12 @@ public class Domain {
 		});
 		timer.start();
 	}
-
+	
+	
+	//Greedy Search
 	public void Greedy(Node start, Node end) {
 
-    System.out.println("Performing Greedy Search Algorithm");
+        System.out.println("Performing Greedy Search Algorithm");
 
 		start.h = start.getDistance(end);
 		start.t = start.h;
@@ -90,9 +91,11 @@ public class Domain {
 		timer.start();
 	}
 
+	
+	//A* Search
 	public void AStar(Node start, Node end) {
 
-    System.out.println("Performing A Star Search Algorithm");
+        System.out.println("Performing A Star Search Algorithm");
 
 		start.g = 0;
 		start.h = start.getDistance(end);
