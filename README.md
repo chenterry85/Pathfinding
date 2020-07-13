@@ -4,6 +4,9 @@
 
 Welcome to pathfinding! This is a grid pathfinding project that employs uniform cost search, greedy search, and A* search from one starting node to the end node. I built this project out of my own interest to visualize pathfinding algorithm in live action!
 
+<a href="https://https://youtu.be/HeObeF7Ac4g">
+</a>
+
 ## Installation
 
 ```bash
@@ -36,10 +39,3 @@ java Window.java
    - **"g"** - Greedy Search\n
    - **"u"** - Uniform Cost Search\n
 5) Press **"r"** to **RESET**
-
-## Screenshoots
-
-![](images/sc1.png)
-![](images/sc2.png)
-![](images/sc3.png)
-![](images/sc4.png)
