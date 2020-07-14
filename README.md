@@ -4,16 +4,16 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
 
 <p float="left">
   <a href="https://https://youtu.be/HeObeF7Ac4g">
-    <img src="http://i.freegifmaker.me/1/5/9/4/6/4/1594646674114920.gif?1594646688" width="45%" />
+    <img src="https://user-images.githubusercontent.com/60279271/87455168-9b58a400-c637-11ea-8a5d-2b6a968b1736.gif" width="45%" />
   </a>
   <a href="https://www.youtube.com/watch?v=8qppoFKyK9s">
-    <img src="http://i.freegifmaker.me/1/5/9/4/6/5/15946535161149292.gif?1594653527" width="45%" />
+    <img src="https://user-images.githubusercontent.com/60279271/87455832-9fd18c80-c638-11ea-8e4f-48c9a49aefde.gif" width="45%" />
   </a>
   <a href="https://www.youtube.com/watch?v=d8zUc5UvtF8">
-    <img src="http://i.freegifmaker.me/1/5/9/4/6/4/15946474201149226.gif?1594647434" width="45%" />
+    <img src="https://user-images.githubusercontent.com/60279271/87456078-fdfe6f80-c638-11ea-9aa9-c4bc4ab14f2d.gif" width="45%" />
   </a>
   <a href="https://www.youtube.com/watch?v=qr5o0Cy_bvA">
-    <img src="http://i.freegifmaker.me/1/5/9/4/6/5/15946534231149211.gif?1594653435" width="45%" />
+    <img src="https://user-images.githubusercontent.com/60279271/87455565-3baec880-c638-11ea-9a35-a8da9044623a.gif" width="45%" />
   </a>
 </p>
 
