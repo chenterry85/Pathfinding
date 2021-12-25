@@ -18,7 +18,7 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
 </p>
 
 ## Requirements
-Java 13+
+- Java 13+
 
 ## Installation
 
