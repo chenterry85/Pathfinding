@@ -17,6 +17,9 @@ Welcome to pathfinding! This is a grid pathfinding project that employs uniform 
   </a>
 </p>
 
+## Requirements
+Java 13+
+
 ## Installation
 
 ```bash
